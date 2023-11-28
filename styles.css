@@ -1,0 +1,15 @@
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.botao {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

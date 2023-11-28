@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="William Wollert">
+    <meta description="Atividade de desenvolvimento web - Tabuada Avançada">
+    <title>Atividade BSN WEB</title>
+    <link rel="styles" href="styles.css">
+    <link rel="Icon" href="" type="Image/Icon">   
+</head>
+<body>
+    <h2 id="titulo">Tabuada Avançada</h2>
+    <label for="numero">Informe até que número deve ser a tabuada:</label>
+    <input type="number" id="numero" name="numero">
+    <label for="exibirTabuadas">Exibir tabuadas de 1 até o número informado:</label>
+    <input type="checkbox" id="exibirTabuadas" name="exibirTabuadas">
+    <button id="botao" onclick="gerarTabuadas()">Gerar Tabuadas</button>
+    <div id="resultado"></div>
+    <script>
+        function gerarTabuadas() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var exibirTabuadas = document.getElementById("exibirTabuadas").checked;
+            var resultado = "";
+            for (var i = 1; i <= numero; i++) {
+                if (exibirTabuadas) {
+                    resultado += "<h3>Tabuada do " + i + "</h3>";
+                }
+                for (var j = 1; j <= numero; j++) {
+                    resultado += i + " x " + j + " = " + (i * j) + "<br>";
+                }
+                resultado += "<br>";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
